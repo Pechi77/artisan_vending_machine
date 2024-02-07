@@ -10,5 +10,6 @@ class User(Base):
     email = Column(String(100))
     hashed_password = Column(String(200))
     role = Column(String(6))
+    balance = Column(Float, default=0.0)
 
     products = relationship("Product", back_populates="seller")

@@ -10,7 +10,7 @@ class UserCreate(UserBase):
 
     @validator('role')
     def validate_role(cls, role):
-        if role not in ["seller", "buyer"]:
+        if role not in ["seller", "buyer", "admin"]:
             raise ValueError('Invalid Role')
         return role
 

@@ -25,7 +25,7 @@ def get_current_user(db: Session = Depends(database.get_db), token: str = Depend
     except JWTError:
         raise credentials_exception
 
-    user = db.query(user.User).filter(user.User.username == username).first()
-    if user is None:
+    uservalue = db.query(user.User).filter(user.User.username == username).first()
+    if uservalue is None:
         raise credentials_exception
-    return user
+    return uservalue

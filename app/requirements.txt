@@ -8,4 +8,5 @@ passlib[bcrypt]
 python-jose[cryptography]
 mysql-connector-python
 pydantic[email]
+python-multipart
 
