@@ -1,9 +1,9 @@
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 
-from app import schemas
-from app.models.product import Product
-from app.models.user import User
+from artisan_vending_machine.app import schemas
+from artisan_vending_machine.app.models.product import Product
+from artisan_vending_machine.app.models.user import User
 
 
 

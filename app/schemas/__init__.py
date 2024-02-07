@@ -1,1 +1,1 @@
-from app.schemas.deposit import Deposit
+from artisan_vending_machine.app.schemas.deposit import Deposit

@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from app import  services, models
-from app.schemas.transaction import PurchaseResponse, PurchaseItem
-from app.schemas.deposit import Deposit
-from app.database import get_db
-from app.core.auth import get_current_user
+from artisan_vending_machine.app import  services, models
+from artisan_vending_machine.app.schemas.transaction import PurchaseResponse, PurchaseItem
+from artisan_vending_machine.app.schemas.deposit import Deposit
+from artisan_vending_machine.app.database import get_db
+from artisan_vending_machine.app.core.auth import get_current_user
 
 router = APIRouter()
 

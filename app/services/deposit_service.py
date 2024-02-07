@@ -1,8 +1,8 @@
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 
-from app.models import user
-from app.schemas import deposit
+from artisan_vending_machine.app.models import user
+from artisan_vending_machine.app.schemas import deposit
 
 def deposit_to_account(db: Session, user_id: int, deposit: deposit.Deposit) -> user.User:
     user = db.query(user.User).filter(user.User.id == user_id).first()
