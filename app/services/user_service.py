@@ -1,8 +1,8 @@
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
-from artisan_vending_machine.app.models.user import User
-from artisan_vending_machine.app.schemas.user import UserCreate, UserUpdate
-from artisan_vending_machine.app.core.security import get_password_hash, verify_password
+from app.models.user import User
+from app.schemas.user import UserCreate, UserUpdate
+from app.core.security import get_password_hash, verify_password
 
 def get_user_by_username(db: Session, username: str) -> User:
     return db.query(User).filter(User.username == username).first()

@@ -1,7 +1,6 @@
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
-from artisan_vending_machine.app import schemas
-from artisan_vending_machine.app.core import settings
+from app.core import settings
 
 
 

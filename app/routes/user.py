@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
-from artisan_vending_machine.app.services import user_service
-from artisan_vending_machine.app.schemas.user import UserCreate, User, UserUpdate
-from artisan_vending_machine.app.database import get_db  
-from artisan_vending_machine.app.core import auth
-from artisan_vending_machine.app.services.auth_service import create_access_token
-from artisan_vending_machine.app.core.auth import get_current_user
+from app.services import user_service
+from app.schemas.user import UserCreate, User, UserUpdate
+from app.database import get_db  
+from app.core import auth
+from app.services.auth_service import create_access_token
+from app.core.auth import get_current_user
 router = APIRouter()
 
 @router.post("/token")

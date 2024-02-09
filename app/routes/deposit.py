@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from artisan_vending_machine.app.database import get_db
-from artisan_vending_machine.app.services import deposit_service
-from artisan_vending_machine.app.core.auth import get_current_user
-from artisan_vending_machine.app.schemas import deposit
-from artisan_vending_machine.app.schemas import user
+from app.database import get_db
+from app.services import deposit_service
+from app.core.auth import get_current_user
+from app.schemas import deposit
+from app.schemas import user
 
 router = APIRouter()
 

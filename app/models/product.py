@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Float, ForeignKey
 from sqlalchemy.orm import relationship
-from artisan_vending_machine.app.database import Base
+from app.database import Base
 
 
 
