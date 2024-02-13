@@ -2,12 +2,13 @@ from fastapi import HTTPException
 from sqlalchemy.orm import Session
 
 from app import schemas
+from app.schemas import product
 from app.models.product import Product
 from app.models.user import User
 
 
 
-def create_product(db: Session, product: schemas.product.ProductCreate, user_id: int):
+def create_product(db: Session, product: product.ProductCreate, user_id: int):
     # Your logic to create a product
     new_product = Product(name=product.name, price=product.price, stock=product.stock, seller_id=user_id)
     db.add(new_product)
@@ -23,7 +24,7 @@ def get_product(db: Session, product_id: int):
 def get_products(db: Session, skip: int = 0, limit: int = 100):
     return db.query(Product).offset(skip).limit(limit).all()
 
-def update_product(db: Session, product_id: int, product: schemas.product.ProductUpdate, seller_id: int):
+def update_product(db: Session, product_id: int, product: product.ProductUpdate, seller_id: int):
     db_product = db.query(Product).filter(Product.id == product_id, Product.seller_id == seller_id).first()
     if db_product:
         for var, value in vars(product).items():

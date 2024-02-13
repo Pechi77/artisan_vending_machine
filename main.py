@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routes import user, product, transaction, buy, deposit
+from app.routes import user, product, transaction,  deposit
 
 from app.database import engine, Base
 
@@ -13,6 +13,5 @@ create_tables()
 app.include_router(user.router)
 app.include_router(product.router)
 app.include_router(transaction.router)
-app.include_router(buy.router)
 app.include_router(deposit.router)
 
